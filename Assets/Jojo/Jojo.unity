@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 282912251}
   - component: {fileID: 282912250}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: fake player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oxygenValue: 100
-  oxygenSlider: {fileID: 1223459229}
 --- !u!4 &282912251
 Transform:
   m_ObjectHideFlags: 0
@@ -325,6 +324,7 @@ GameObject:
   - component: {fileID: 772911139}
   - component: {fileID: 772911138}
   - component: {fileID: 772911137}
+  - component: {fileID: 772911141}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -416,6 +416,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &772911141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772911136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df56487f13b05748a9942d1528a6618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &807738590
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +476,7 @@ GameObject:
   - component: {fileID: 1223459228}
   - component: {fileID: 1223459229}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: OxygenSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

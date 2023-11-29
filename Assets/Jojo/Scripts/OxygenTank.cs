@@ -15,24 +15,18 @@ public class OxygenTank : MonoBehaviour
     //This WaitForSeconds could be reused to keep a consistent starting time throughout the game.
     public WaitForSeconds startingTime;
 
-    public Slider oxygenSlider;
-
     void Start()
     {
-        oxygenSlider.value = 100;
         startingTime = new WaitForSeconds(3);
         StartCoroutine(LoseOxygen());
-        print(oxygenLeak);
     }
 
     void Update()
     {
-        oxygenSlider.value = oxygenValue;
         if (oxygenValue <= 0)
         {
             //trigger player death.
         }
-        print(oxygenValue);
     }
 
     private void OnCollisionEnter(Collision other) //Checks only for collision with oxygen tanks or with enemies/enemy lasers and appropriately addresses the data.
