@@ -8,24 +8,18 @@ public class UImanager : MonoBehaviour
     private OxygenTank oxygenTank;
     private float oxygenTankValue;
 
+    private Slider oxygenSlider;
     private float sliderValue;
 
     private void Awake()
     {
-        sliderValue = GetComponentInChildren<Slider>().value;
+        oxygenSlider = GetComponentInChildren<Slider>();
         oxygenTank = GameObject.FindGameObjectWithTag("Player").GetComponent<OxygenTank>();
-        oxygenTankValue = oxygenTank.oxygenValue;
-    }
-    void Start()
-    {
-        print(oxygenTank);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        sliderValue = oxygenTankValue;
-        print(sliderValue);
+        oxygenTankValue = oxygenTank.oxygenValue;
+        oxygenSlider.value = oxygenTankValue;
     }
-
 }

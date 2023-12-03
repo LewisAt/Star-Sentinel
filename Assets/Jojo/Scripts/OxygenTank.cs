@@ -41,6 +41,7 @@ public class OxygenTank : MonoBehaviour
 
     IEnumerator LoseOxygen() //Timer that'll lower the Oxygen Value until it reaches zero or less.
     {
+        print("coroutine started");
         yield return startingTime;
         while (oxygenValue > 0) 
         {
