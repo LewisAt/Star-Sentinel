@@ -20,8 +20,8 @@ public class BulletScript : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
         
         //If we want the bullet to rotate, uncomment this part:
-        float rot = Mathf.Atan2(rotation.x, rotation.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot);
+        float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
         
     }
 }
