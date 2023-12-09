@@ -1639,6 +1639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skyobject
       objectReference: {fileID: 0}
+    - target: {fileID: 1303127311597153467, guid: 01975929ba73c734ba8619cd6f3741f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4776861623478550529, guid: 01975929ba73c734ba8619cd6f3741f6, type: 3}
       propertyPath: m_SortingOrder
       value: -12
