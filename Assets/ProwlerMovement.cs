@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.MPE;
 using UnityEngine;
+using UnityEngine.Timeline;
 using UnityEngine.UIElements;
 
 public class ProwlerMovement : MonoBehaviour
 {
     public Rigidbody2D rb2D;
     public GameObject prowler;
-    public float speed = -2;
+
+    public float speed;
 
     public LayerMask downCape;
     public LayerMask frontCape;
@@ -18,11 +20,14 @@ public class ProwlerMovement : MonoBehaviour
 
     public Transform downController;
     public Transform frontController;
+    
 
     public bool downInfo;
     public bool frontInfo;
 
     public bool isRight = false;
+    
+   
 
     public void Update()
     {
@@ -31,9 +36,13 @@ public class ProwlerMovement : MonoBehaviour
         frontInfo = Physics2D.Raycast(frontController.position, transform.right ,frontDistance,frontCape);
         downInfo = Physics2D.Raycast(downController.position, transform.up *-1, downDistance, downCape);
 
-        if(frontInfo || !downInfo)
+        if(!downInfo)
         {
             Turn();
+        }
+        if(frontInfo == true)
+        {
+            Chase();
         }
        
     }
@@ -51,5 +60,11 @@ public class ProwlerMovement : MonoBehaviour
 
         Gizmos.DrawLine(downController.transform.position, downController.transform.position + transform.up * -1 * downDistance);
         Gizmos.DrawLine(frontController.transform.position, frontController.transform.position + transform.right  * frontDistance);
+    }
+
+    private void Chase()
+    {
+        rb2D.velocity = new Vector2(speed * 2, rb2D.velocity.y);
+ 
     }
 }
