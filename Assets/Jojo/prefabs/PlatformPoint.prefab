@@ -45,14 +45,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -66,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -78,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -90,27 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1914792281223594322, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5119577854178927954, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 8828774368012429223, guid: 085e5799997465745b1fe935cfa27735, type: 3}
-    - target: {fileID: 5119577854178927954, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5119577854178927954, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5119577854178927954, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
-      propertyPath: m_Color.r
-      value: 1
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7736718873508055193, guid: a4df28cf3c0e4294e8a863c60390a3b7, type: 3}
       propertyPath: m_Name

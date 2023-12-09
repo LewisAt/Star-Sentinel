@@ -5,12 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float PlayerSpeedMultiplier = 1f; 
-    [SerializeField]
-    private float ForceOfGravity = 9.81f;
+    private float PlayerSpeedMultiplier = 1f;
     public GameObject Feet;
     private Rigidbody2D playerRB;
-    //public AnimationCurve ()
     // Start is called before the first frame update
     void Start()
     {
@@ -18,34 +15,17 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-
-    float heldDownTime = 0.5f;
     void Update()
     {
         float horionztal = Input.GetAxis("Horizontal");
-        Vector2 direction = new Vector3 (horionztal,0);
+        Vector3 direction = new Vector3 (horionztal,0, 0);
         direction = direction.normalized * PlayerSpeedMultiplier;
-        playerRB.velocity = direction;
-        playerRB.velocity += Vector2.up * -ForceOfGravity;
-
-
-        if(Physics2D.OverlapCircle(Feet.transform.position,5f,~6))
+        RaycastHit hit;
+        playerRB.AddForce(direction);
+        if(Physics.CheckSphere(Feet.transform.position, 0.5f))
         {
-            Debug.Log("WOWOWOWOOOWW");
+            Debug.Log("You Hit A Something");
         }
-
-        if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f)
-        {
-            playerRB.velocity += new Vector2(0, 65 * heldDownTime);
-            heldDownTime -= Time.deltaTime;
-        }
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            heldDownTime = 0.5f ;
-        }
-    }
-    private void FixedUpdate()
-    {
-
+        
     }
 }
