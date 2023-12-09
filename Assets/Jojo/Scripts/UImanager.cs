@@ -14,10 +14,12 @@ public class UImanager : MonoBehaviour
 
     private TextMeshProUGUI currentHeightText;
     private float currentHeightNum;
+    public static bool bossFight;
 
 
     private void Awake()
     {
+        bossFight = false;
         oxygenSlider = GetComponentInChildren<Slider>();
         currentHeightText = GetComponentInChildren<TextMeshProUGUI>();
         oxygenTank = GameObject.FindGameObjectWithTag("Player").GetComponent<OxygenTank>();

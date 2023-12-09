@@ -61,16 +61,5 @@ public class Shoot : MonoBehaviour
         }
     }
 
-    private IEnumerator resizeRoutine(float oldSize, float newSize, float time)
-    {
-        float elapsed = 0;
-        while (elapsed <= time)
-        {
-            elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / time);
-
-            mainCamera.orthographicSize = Mathf.Lerp(oldSize, newSize, t);
-            yield return null;
-        }
-    }
+    
 }
