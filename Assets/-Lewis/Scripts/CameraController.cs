@@ -20,8 +20,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xLerp = Mathf.Lerp(this.transform.position.x, player.transform.position.x, CameraFollowDelay);
-        this.transform.position = new Vector3(xLerp, this.transform.position.y + (2.7f * Time.deltaTime), -10);
+        this.transform.position = new Vector3(0, this.transform.position.y + (2.7f * Time.deltaTime), -10);
 
     }
 }
