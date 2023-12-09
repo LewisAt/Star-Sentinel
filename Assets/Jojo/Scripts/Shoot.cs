@@ -21,7 +21,6 @@ public class Shoot : MonoBehaviour
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         flare.gameObject.SetActive(false);
-        //StartCoroutine(resizeRoutine(15, 25, 3));
     }
 
     private void Update()

@@ -34,6 +34,9 @@ public class UImanager : MonoBehaviour
 
         //updating current height
         currentHeightNum = playerMovement.currentHeight;
-        currentHeightText.text = string.Format("Current Height: {0}", currentHeightNum.ToString("0.00"));
+        if (currentHeightText != null && currentHeightText.name != "BossName")
+        {
+            currentHeightText.text = string.Format("Current Height: {0}", currentHeightNum.ToString("0.00"));
+        }
     }
 }
