@@ -14,6 +14,5 @@ public class Distanceto : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

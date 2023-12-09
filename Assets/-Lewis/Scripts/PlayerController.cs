@@ -28,6 +28,12 @@ public class PlayerController : MonoBehaviour
         playerRB.velocity = direction;
         playerRB.velocity += Vector2.up * -ForceOfGravity;
 
+
+        if(Physics2D.OverlapCircle(Feet.transform.position,5f,~6))
+        {
+            Debug.Log("WOWOWOWOOOWW");
+        }
+
         if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f)
         {
             playerRB.velocity += new Vector2(0, 65 * heldDownTime);
