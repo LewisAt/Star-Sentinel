@@ -637,6 +637,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitleScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 1f4574f3603a9f8489e0cfaf2ccf7c3b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 1f4574f3603a9f8489e0cfaf2ccf7c3b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 1f4574f3603a9f8489e0cfaf2ccf7c3b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 1f4574f3603a9f8489e0cfaf2ccf7c3b, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
     private Camera mainCamera;
     private Vector3 mousePos;
+    private float rotateZ;
+    private Vector3 turned;
 
     public GameObject bullet;
     public Transform bulletTransform;
@@ -25,6 +28,8 @@ public class Shoot : MonoBehaviour
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
+        CheckAngle();
+
         if (!canFire)
         {
             timer += Time.deltaTime;
@@ -38,6 +43,18 @@ public class Shoot : MonoBehaviour
         {
             canFire = false;
             Instantiate(bullet,bulletTransform.position, Quaternion.identity);
+            print(transform.rotation.z);
         }
+    }
+
+    public void CheckAngle()
+    {
+        rotateZ = transform.rotation.z;
+        if (rotateZ > 0.7 || rotateZ < -0.7)
+        {
+            turned = new Vector3(180, 0, 0);
+            transform.Rotate(turned);
+        }
+        
     }
 }
