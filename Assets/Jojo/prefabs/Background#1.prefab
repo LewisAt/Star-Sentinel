@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7716384661384958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2873985827714810495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -100,7 +100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3253868816016869086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -134,7 +134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7077960477275936524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 552686609161196943}
   - component: {fileID: 126549062136001784}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Background#1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ Transform:
   m_GameObject: {fileID: 8409366661681479284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalScale: {x: 26, y: 26, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8838234169562774950}
@@ -177,7 +177,7 @@ Transform:
   - {fileID: 1483389328908778477}
   - {fileID: 286170945013296471}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &126549062136001784
 SpriteRenderer:
@@ -220,8 +220,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.16647385, g: 0.4056604, b: 0.19253366, a: 1}
+  m_Sprite: {fileID: 5125353240440873482, guid: e116a59db545f9543a8cdc2226907bdb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -371,9 +371,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 286170945013296471}
     m_Modifications:
+    - target: {fileID: 2182337545960123238, guid: 8859984b5384ce24ea766486283dceda, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2212309842682967143, guid: 8859984b5384ce24ea766486283dceda, type: 3}
       propertyPath: m_Name
       value: SpawnPointOxygen (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212309842682967143, guid: 8859984b5384ce24ea766486283dceda, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7125050295581371573, guid: 8859984b5384ce24ea766486283dceda, type: 3}
       propertyPath: m_RootOrder
@@ -517,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1344152315192103380, guid: 85ee9a8cffd7ec04694a1149e60d6cc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0261
+      value: 0.192
       objectReference: {fileID: 0}
     - target: {fileID: 1344152315192103380, guid: 85ee9a8cffd7ec04694a1149e60d6cc4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1039,9 +1047,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 286170945013296471}
     m_Modifications:
+    - target: {fileID: 2182337545960123238, guid: 8859984b5384ce24ea766486283dceda, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2212309842682967143, guid: 8859984b5384ce24ea766486283dceda, type: 3}
       propertyPath: m_Name
       value: SpawnPointOxygen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212309842682967143, guid: 8859984b5384ce24ea766486283dceda, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7125050295581371573, guid: 8859984b5384ce24ea766486283dceda, type: 3}
       propertyPath: m_RootOrder
@@ -1171,9 +1187,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 286170945013296471}
     m_Modifications:
+    - target: {fileID: 2182337545960123238, guid: 8859984b5384ce24ea766486283dceda, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2212309842682967143, guid: 8859984b5384ce24ea766486283dceda, type: 3}
       propertyPath: m_Name
       value: SpawnPointOxygen (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212309842682967143, guid: 8859984b5384ce24ea766486283dceda, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7125050295581371573, guid: 8859984b5384ce24ea766486283dceda, type: 3}
       propertyPath: m_RootOrder
