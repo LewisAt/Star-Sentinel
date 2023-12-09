@@ -11,6 +11,7 @@ public class Shoot : MonoBehaviour
     private Vector3 turned;
 
     public GameObject bullet;
+    public GameObject flare;
     public Transform bulletTransform;
     public bool canFire;
     private float timer;
@@ -19,6 +20,7 @@ public class Shoot : MonoBehaviour
     private void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        flare.gameObject.SetActive(false);
         //StartCoroutine(resizeRoutine(15, 25, 3));
     }
 
@@ -31,6 +33,7 @@ public class Shoot : MonoBehaviour
 
         CheckAngle();
 
+        flare.SetActive(!canFire);
         if (!canFire)
         {
             timer += Time.deltaTime;
@@ -45,6 +48,7 @@ public class Shoot : MonoBehaviour
             canFire = false;
             Instantiate(bullet,bulletTransform.position, Quaternion.identity);
         }
+
     }
 
     public void CheckAngle()
