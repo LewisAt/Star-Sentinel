@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UImanager : MonoBehaviour
 {
     private OxygenTank oxygenTank;
-    private tempPlayerMovement playerMovement;
+    private PlayerController playerMovement;
     private float oxygenTankValue;
 
     private Slider oxygenSlider;
@@ -21,7 +21,7 @@ public class UImanager : MonoBehaviour
         oxygenSlider = GetComponentInChildren<Slider>();
         currentHeightText = GetComponentInChildren<TextMeshProUGUI>();
         oxygenTank = GameObject.FindGameObjectWithTag("Player").GetComponent<OxygenTank>();
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<tempPlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     void Update()

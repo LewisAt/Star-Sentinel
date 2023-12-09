@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private float ForceOfGravity = 9.81f;
     public GameObject Feet;
     private Rigidbody2D playerRB;
+    public GameObject spawn;
+
+    [HideInInspector] public float heightToReach;
+    [HideInInspector] public float currentHeight;
     //public AnimationCurve ()
     // Start is called before the first frame update
     void Start()
@@ -22,6 +27,7 @@ public class PlayerController : MonoBehaviour
     float heldDownTime = 0.5f;
     void Update()
     {
+        currentHeight = Vector2.Distance(transform.position, spawn.transform.position);
         float horionztal = Input.GetAxis("Horizontal");
         Vector2 direction = new Vector3(horionztal, 0);
         direction = direction.normalized * PlayerSpeedMultiplier;
