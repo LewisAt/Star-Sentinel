@@ -33,6 +33,11 @@ public class BulletScript : MonoBehaviour
                 collision.gameObject.GetComponent<ProwlerHealth>().StartTimer();
                 Destroy(this.gameObject);
             }
+            else if (collision.gameObject.GetComponent<AlienHealth>() != null)
+            {
+                collision.gameObject.GetComponent <AlienHealth>().StartTimer();
+                Destroy(this.gameObject);
+            }
         }
         else if (collision.gameObject.tag != "Player")
         {

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8866424982297822780}
   - component: {fileID: 5531884298302728145}
   - component: {fileID: 4906122426479825712}
+  - component: {fileID: 4168962008700714823}
+  - component: {fileID: 124698662704163730}
   m_Layer: 6
   m_Name: FlyingThing
   m_TagString: Enemy
@@ -31,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5531884298302728145
 SpriteRenderer:
@@ -130,3 +132,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0666666, y: 1.6666667}
   m_EdgeRadius: 0
+--- !u!50 &4168962008700714823
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938471403573476443}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &124698662704163730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938471403573476443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b902c0d2ad6fec5448df7abe76d296bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oxygenDrop: {fileID: 4816316350432909735, guid: 3388eaca64e60d443895f3c7b0ad9995, type: 3}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ProwlerHealth : MonoBehaviour
+public class AlienHealth : MonoBehaviour
 {
     private int health;
     private SpriteRenderer image;
@@ -11,7 +11,7 @@ public class ProwlerHealth : MonoBehaviour
 
     private void Start()
     {
-        health = 3;
+        health = 2;
         image = GetComponent<SpriteRenderer>();
     }
     public IEnumerator TakeDamage()
