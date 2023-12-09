@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Jojo/Oxygen, player aiming, player shooting.unity
-    guid: e18b52750642cdc4082d38b043523fbc
+    path: Assets/Jojo/MainMenu.unity
+    guid: 4b7d5a00bd738584eb521c2a708b4972
+  - enabled: 1
+    path: Assets/Jojo/New Level.unity
+    guid: f7b9ebcfcbe1ce74a8a7a819845ffe4e
   m_configObjects: {}

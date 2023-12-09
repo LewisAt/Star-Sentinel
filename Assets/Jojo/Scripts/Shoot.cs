@@ -19,6 +19,7 @@ public class Shoot : MonoBehaviour
     private void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        //StartCoroutine(resizeRoutine(15, 25, 3));
     }
 
     private void Update()
@@ -43,7 +44,6 @@ public class Shoot : MonoBehaviour
         {
             canFire = false;
             Instantiate(bullet,bulletTransform.position, Quaternion.identity);
-            print(transform.rotation.z);
         }
     }
 
@@ -55,6 +55,18 @@ public class Shoot : MonoBehaviour
             turned = new Vector3(180, 0, 0);
             transform.Rotate(turned);
         }
-        
+    }
+
+    private IEnumerator resizeRoutine(float oldSize, float newSize, float time)
+    {
+        float elapsed = 0;
+        while (elapsed <= time)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / time);
+
+            mainCamera.orthographicSize = Mathf.Lerp(oldSize, newSize, t);
+            yield return null;
+        }
     }
 }
