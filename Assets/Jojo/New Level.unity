@@ -3596,6 +3596,10 @@ PrefabInstance:
       value: 1.0867691
       objectReference: {fileID: 0}
     - target: {fileID: 5941931866903002936, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941931866903002936, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.6315789
       objectReference: {fileID: 0}
