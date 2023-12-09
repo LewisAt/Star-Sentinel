@@ -23,4 +23,20 @@ public class BulletScript : MonoBehaviour
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            if (collision.gameObject.GetComponent<ProwlerHealth>() != null)
+            {
+                collision.gameObject.GetComponent<ProwlerHealth>().StartTimer();
+                Destroy(this.gameObject);
+            }
+        }
+        else if (collision.gameObject.tag != "Player")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
