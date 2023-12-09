@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4a5fbe0166687c04b900bc4e2c87c9d9
+guid: 89d14d1c5bafc4a40966f7b43d81bf1b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 15
+    spritePixelsToUnits: 25
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638376888165528252
+  platformSettingsDirtyTick: 638376841531853354
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Prowler
+  - name: OxygenFilled
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.516129, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 29
-    spriteID: 188100fe94ed72448ae58e42cf688c9a
+      width: 31
+      height: 31
+    spriteID: ccc8f848a2daa8947b5be59c3f3339a8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,20 +142,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -457583399
-    name: Prowler
+    guid: 1175371898
+    name: OxygenFilled
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Prowler
+    - name: OxygenFilled
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
-        width: 32
-        height: 29
-      spriteId: 188100fe94ed72448ae58e42cf688c9a
+        width: 31
+        height: 31
+      spriteId: ccc8f848a2daa8947b5be59c3f3339a8
     linkedCells: []
     parentIndex: -1
   platformSettings:
