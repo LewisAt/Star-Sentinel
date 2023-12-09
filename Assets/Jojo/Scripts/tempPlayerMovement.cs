@@ -9,18 +9,15 @@ public class tempPlayerMovement : MonoBehaviour
 {
     public float ms = 6;
     public Transform target;
+    public GameObject spawn;
     [HideInInspector] public float heightToReach;
     [HideInInspector] public float currentHeight;
     //public LevelGenerator levelGenerator;
 
-    private void Start()
-    {
-        currentHeight = 0;
-    }
-
     private void FixedUpdate()
     {
-        currentHeight = transform.position.y + 10f;
+        currentHeight = Vector2.Distance(transform.position, spawn.transform.position);
+        //currentHeight = (transform.position.y) * 10;
 
         Vector3 targetPos = new Vector3(target.position.x,target.position.y,target.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPos, 0.2f) ;
