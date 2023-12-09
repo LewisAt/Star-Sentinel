@@ -8,7 +8,7 @@ public class OxygenTank : MonoBehaviour
     //OxygenTank should only be accessible by UI to display how much Oxygen is left in the tank.
     public float oxygenValue = 100f;
     private float addOxygen = 15f;
-    private float removeOxygen = -25f;
+    private float removeOxygen = 25f;
     private float oxygenLeak = 2f;
 
 
@@ -29,9 +29,9 @@ public class OxygenTank : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other) //Checks only for collision with oxygen tanks or with enemies/enemy lasers and appropriately addresses the data.
+    private void OnCollisionEnter2D(Collision2D other) //Checks only for collision with oxygen tanks or with enemies/enemy lasers and appropriately addresses the data.
     {
-        if (other.gameObject.tag == "oxygen")
+        if (other.gameObject.tag == "Oxygen")
         {
             oxygenValue += addOxygen;
             Destroy(other.gameObject);

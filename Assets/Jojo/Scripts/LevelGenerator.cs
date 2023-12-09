@@ -14,6 +14,7 @@ public class LevelGenerator : MonoBehaviour
     public float pageSize;
     public int GlobalCurrentRoll;
     public float pageOffset;
+    public int previousPage;
 
     public BGManager[] backgroundChoices;
     private Transform[] tempPlatforms;
@@ -62,12 +63,22 @@ public class LevelGenerator : MonoBehaviour
 
         Instantiate(currentPage, new Vector3(currentPageTransform.position.x, currentPageTransform.position.y + pageOffset,
             currentPageTransform.position.z), Quaternion.identity);
-        pageOffset += 20f;
 
+        previousPage = element;
 
         SpawnPlatforms(tempPlatformParent);
         SpawnProwlers(tempProwlerParent);
         SpawnFlyingThings(tempFlyingThingParent);
+        pageOffset += 20f;
+        AdjustPageSpawnPoint(pageOffset, tempPlatformParent, tempProwlerParent, tempFlyingThingParent);
+    }
+
+    public void AdjustPageSpawnPoint(float offset, GameObject a, GameObject b, GameObject c)
+    {
+        Vector3 offsetVector = new(0,offset,0);
+        a.transform.position = offsetVector;
+        b.transform.position = offsetVector;
+        c.transform.position = offsetVector;
     }
 
     private void SpawnPlatforms(GameObject parent)
@@ -105,6 +116,11 @@ public class LevelGenerator : MonoBehaviour
         int currentRoll = GeneratePageNumber();
         GlobalCurrentRoll = currentRoll;
         SpawnBackground(currentRoll);
+    }
+
+    public void DestroyPage()
+    {
+       
     }
 
     public int GeneratePageNumber()
