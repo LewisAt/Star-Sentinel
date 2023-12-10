@@ -49,9 +49,16 @@ public class PlayerController : MonoBehaviour
         {
             heldDownTime = 0.5f;
         }
+        setStaticDistance(currentHeight);
     }
     private void FixedUpdate()
     {
 
+    }
+    public static float StaticDistance = 0;
+
+    public static void setStaticDistance(float height)
+    {
+        StaticDistance = height;
     }
 }
