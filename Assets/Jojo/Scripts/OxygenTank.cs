@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,13 @@ public class OxygenTank : MonoBehaviour
     private float addOxygen = 15f;
     private float removeOxygen = 25f;
     private float oxygenLeak = 2f;
+    [SerializeField]
+    private float timeBeforeDeath = 3f;
+    [SerializeField]
+    private Image BackGroundFade;
+    [SerializeField]
+    private AnimationCurve FadeCurve;
+
 
 
     //This WaitForSeconds could be reused to keep a consistent starting time throughout the game.
@@ -25,8 +33,29 @@ public class OxygenTank : MonoBehaviour
     {
         if (oxygenValue <= 0)
         {
+            timeBeforeDeath -= Time.deltaTime;
             //trigger player death.
         }
+        if (timeBeforeDeath <= 0) 
+        {
+
+        }
+    }
+    float curve;
+    void fadeinGameOverScreen()
+    {
+        curve = Mathf.Lerp(curve, 1, 1 * Time.deltaTime);
+        float position = FadeCurve.Evaluate(curve);
+        Debug.Log(position);
+
+
+        Color CurrentColor = BackGroundFade.color;
+        CurrentColor.a = Mathf.Lerp(BackGroundFade.color.a, 0, position);
+        BackGroundFade.color = CurrentColor;
+    }
+    IEnumerator GameOver()
+    {
+
     }
 
     private void OnCollisionEnter2D(Collision2D other) //Checks only for collision with oxygen tanks or with enemies/enemy lasers and appropriately addresses the data.
