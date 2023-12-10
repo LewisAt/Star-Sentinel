@@ -6,6 +6,7 @@ public class ProwlerHealth : MonoBehaviour
     private int health;
     private SpriteRenderer image;
     public GameObject oxygenDrop;
+    public BoxCollider2D PlayerHurtableBox;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class ProwlerHealth : MonoBehaviour
         health--;
         if (health <= 0) 
         {
+            PlayerHurtableBox.enabled = false;
             StartCoroutine(Die());
             yield break;
         }
