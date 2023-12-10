@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour
 
         if (Physics2D.OverlapCircle(Feet.transform.position, 5f, ~6))
         {
-            Debug.Log("WOWOWOWOOOWW");
         }
 
         if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f)

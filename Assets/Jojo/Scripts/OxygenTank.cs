@@ -33,7 +33,8 @@ public class OxygenTank : MonoBehaviour
     {
         if (oxygenValue <= 0)
         {
-            timeBeforeDeath -= Time.deltaTime;
+            //timeBeforeDeath -= Time.deltaTime;
+            //fadeinGameOverScreen();
             //trigger player death.
         }
         if (timeBeforeDeath <= 0) 
@@ -41,10 +42,12 @@ public class OxygenTank : MonoBehaviour
 
         }
     }
+
+
     float curve;
     void fadeinGameOverScreen()
     {
-        curve = Mathf.Lerp(curve, 1, 1 * Time.deltaTime);
+        curve = Mathf.Lerp(curve, 1, 0.33f * Time.deltaTime);
         float position = FadeCurve.Evaluate(curve);
         Debug.Log(position);
 
@@ -53,10 +56,10 @@ public class OxygenTank : MonoBehaviour
         CurrentColor.a = Mathf.Lerp(BackGroundFade.color.a, 0, position);
         BackGroundFade.color = CurrentColor;
     }
-    IEnumerator GameOver()
+    /*IEnumerator GameOver()
     {
 
-    }
+    }*/
 
     private void OnCollisionEnter2D(Collision2D other) //Checks only for collision with oxygen tanks or with enemies/enemy lasers and appropriately addresses the data.
     {
