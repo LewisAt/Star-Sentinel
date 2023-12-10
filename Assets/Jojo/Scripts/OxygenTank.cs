@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OxygenTank : MonoBehaviour
@@ -12,7 +13,7 @@ public class OxygenTank : MonoBehaviour
     private float removeOxygen = 25f;
     private float oxygenLeak = 2f;
     [SerializeField]
-    private float timeBeforeDeath = 3f;
+    private float timeBeforeDeath = 4.5f;
     [SerializeField]
     private Image BackGroundFade;
     [SerializeField]
@@ -33,28 +34,45 @@ public class OxygenTank : MonoBehaviour
     {
         if (oxygenValue <= 0)
         {
-            //timeBeforeDeath -= Time.deltaTime;
-            //fadeinGameOverScreen();
+            timeBeforeDeath -= Time.deltaTime;
+            fadeinGameOverScreen();
             //trigger player death.
+        }
+        else
+        {
+            timeBeforeDeath = 4.5f;
+            fadeIntoRecovery();
+
         }
         if (timeBeforeDeath <= 0) 
         {
-
+            SceneManager.LoadScene(2);
         }
     }
 
 
-    float curve;
+    float curve = 0;
     void fadeinGameOverScreen()
     {
-        curve = Mathf.Lerp(curve, 1, 0.33f * Time.deltaTime);
+        curve = Mathf.Lerp(curve, 1, 0.011f * Time.deltaTime);
         float position = FadeCurve.Evaluate(curve);
         Debug.Log(position);
 
 
         Color CurrentColor = BackGroundFade.color;
+        CurrentColor.a = Mathf.Lerp(BackGroundFade.color.a, 1, position);
+        BackGroundFade.color = CurrentColor;
+    }
+    void fadeIntoRecovery()
+    {
+        curve = Mathf.Lerp(curve, 0, 1f * Time.deltaTime);
+
+        float position = FadeCurve.Evaluate(curve);
+
+        Color CurrentColor = BackGroundFade.color;
         CurrentColor.a = Mathf.Lerp(BackGroundFade.color.a, 0, position);
         BackGroundFade.color = CurrentColor;
+
     }
     /*IEnumerator GameOver()
     {

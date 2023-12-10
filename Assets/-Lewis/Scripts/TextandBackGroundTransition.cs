@@ -12,6 +12,7 @@ public class TextandBackGroundTransition : MonoBehaviour
     public float BeforeStartDelay;
     public float DelayInMovement;
     public AnimationCurve BendBend;
+    public GameObject DisableScreen;
 
     private bool canLerp = false;
     // Start is called before the first frame update
@@ -44,5 +45,9 @@ public class TextandBackGroundTransition : MonoBehaviour
         Color CurrentColor = CanvasToFadeAway.color;
         CurrentColor.a = Mathf.Lerp(CanvasToFadeAway.color.a, 0, DelayInMovement * Time.deltaTime);
         CanvasToFadeAway.color = CurrentColor;
+        if (curve >= 0.95f)
+        {
+            DisableScreen.SetActive(false);
+        }
     }
 }

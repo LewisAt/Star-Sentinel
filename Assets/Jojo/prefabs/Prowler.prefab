@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5592329121846367062}
   - component: {fileID: 8838614026608920781}
   - component: {fileID: 8696246163230723968}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Prowler
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ Transform:
   - {fileID: 5245619305997770243}
   - {fileID: 4311932971805740238}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4002540935976367324
 SpriteRenderer:
