@@ -25,10 +25,10 @@ public class ProwlerMovement : MonoBehaviour
     public bool downInfo;
     public bool frontInfo;
 
-    public bool isRight = false;
-    
-   
+    public bool isRight = true;
 
+
+   
     public void Update()
     {
         
@@ -65,6 +65,6 @@ public class ProwlerMovement : MonoBehaviour
     private void Chase()
     {
         rb2D.velocity = new Vector2(speed * 2, rb2D.velocity.y);
- 
     }
+ 
 }

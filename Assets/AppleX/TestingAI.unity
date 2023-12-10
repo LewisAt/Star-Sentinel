@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prowler
       objectReference: {fileID: 0}
+    - target: {fileID: 8838614026608920781, guid: cb0fb793064a89b41bc53ab852874e1a, type: 3}
+      propertyPath: frontDistance
+      value: 2.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -206,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8866424982297822780, guid: 541c87107199e594885040b6e6d2ba40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.15
       objectReference: {fileID: 0}
     - target: {fileID: 8866424982297822780, guid: 541c87107199e594885040b6e6d2ba40, type: 3}
       propertyPath: m_LocalPosition.z
