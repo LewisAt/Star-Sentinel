@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector] public float heightToReach;
     [HideInInspector] public float currentHeight;
+
+
+    private bool canJump = false;
+    private bool CanDoubleJump = false;
+
     //public AnimationCurve ()
     // Start is called before the first frame update
     void Start()
@@ -33,13 +38,20 @@ public class PlayerController : MonoBehaviour
         direction = direction.normalized * PlayerSpeedMultiplier;
         playerRB.velocity = direction;
         playerRB.velocity += Vector2.up * -ForceOfGravity;
-
-
-        if (Physics2D.OverlapCircle(Feet.transform.position, 5f, ~6))
+        RaycastHit2D hit;
+        if(Physics2D.Raycast(Feet.transform.position,Vector2.down,5,~7))
         {
+            //reset jump and double jump
         }
+        else
+        {
+           // if double jump is not false and player jumps set doulbe jumpt to false
+        }
+        CanDoubleJump = true;
 
-        if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f)
+ 
+
+        if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f && canJump || CanDoubleJump)
         {
             playerRB.velocity += new Vector2(0, 65 * heldDownTime);
             heldDownTime -= Time.deltaTime;

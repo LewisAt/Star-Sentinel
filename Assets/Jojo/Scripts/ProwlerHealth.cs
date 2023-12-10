@@ -21,7 +21,6 @@ public class ProwlerHealth : MonoBehaviour
         health--;
         if (health <= 0) 
         {
-            PlayerHurtableBox.enabled = false;
             StartCoroutine(Die());
             yield break;
         }
@@ -44,7 +43,8 @@ public class ProwlerHealth : MonoBehaviour
     {
         Color alphaChange = image.color;
         Transform size = gameObject.transform;
-        
+        PlayerHurtableBox.enabled = false;
+
         for (int i = 0; i < 3;i++)
         {
             alphaChange.a = Mathf.Lerp(alphaChange.a, 0, 0.2f);

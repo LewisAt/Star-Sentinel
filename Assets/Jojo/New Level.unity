@@ -2495,11 +2495,6 @@ Transform:
   m_Father: {fileID: 1590844114}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &642494876 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5905841163087112351, guid: cf0f89e1a252cd240bf6471afa871dfc, type: 3}
-  m_PrefabInstance: {fileID: 5244601362140869822}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &663305567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,82 +2584,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5727575738466805606, guid: b285f5a7e4d171749b263d55962a22b7, type: 3}
   m_PrefabInstance: {fileID: 1399356807}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &820293664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 820293665}
-  - component: {fileID: 820293667}
-  - component: {fileID: 820293666}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &820293665
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820293664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 642494876}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &820293666
+--- !u!114 &820293666 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 564127753715564093, guid: cf0f89e1a252cd240bf6471afa871dfc, type: 3}
+  m_PrefabInstance: {fileID: 5244601362140869822}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820293664}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &820293667
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820293664}
-  m_CullTransparentMesh: 1
 --- !u!1 &859041797
 GameObject:
   m_ObjectHideFlags: 0
@@ -6797,74 +6727,6 @@ PrefabInstance:
       propertyPath: BackGroundFade
       value: 
       objectReference: {fileID: 820293666}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[1].time
-      value: 0.30626124
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[2].time
-      value: 0.8135034
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[3].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[1].value
-      value: 0.8002261
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[2].value
-      value: 0.5955736
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[3].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[1].inSlope
-      value: 1.2792013
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[2].inSlope
-      value: -0.076935075
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[3].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[1].outSlope
-      value: 1.2792013
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[2].outSlope
-      value: -0.076935075
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[3].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789369232779360657, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: FadeCurve.m_Curve.Array.data[2].outWeight
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2283204738408877736, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6941,10 +6803,6 @@ PrefabInstance:
     - target: {fileID: 4309213963075649419, guid: cf0f89e1a252cd240bf6471afa871dfc, type: 3}
       propertyPath: m_Name
       value: PlayerUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309213963075649419, guid: cf0f89e1a252cd240bf6471afa871dfc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5905841163087112351, guid: cf0f89e1a252cd240bf6471afa871dfc, type: 3}
       propertyPath: m_Pivot.x
@@ -7032,9 +6890,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5905841163087112351, guid: cf0f89e1a252cd240bf6471afa871dfc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 820293665}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0f89e1a252cd240bf6471afa871dfc, type: 3}

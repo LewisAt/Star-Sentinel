@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oxygenDrop: {fileID: 4816316350432909735, guid: 3388eaca64e60d443895f3c7b0ad9995, type: 3}
+  PlayerHurtableBox: {fileID: 4727561257780625116}
 --- !u!61 &8151543396323648108
 BoxCollider2D:
   m_ObjectHideFlags: 0
