@@ -10,7 +10,10 @@ public class UImanager : MonoBehaviour
     private PlayerController playerMovement;
     private float oxygenTankValue;
 
+    private BossHealth boss;
     private Slider oxygenSlider;
+    private Slider bossSlider;
+    private float bossHealth;
 
     private TextMeshProUGUI currentHeightText;
     private float currentHeightNum;
@@ -20,10 +23,17 @@ public class UImanager : MonoBehaviour
     private void Awake()
     {
         bossFight = false;
-        oxygenSlider = GetComponentInChildren<Slider>();
+
+        oxygenSlider = transform.GetChild(0).GetComponent<Slider>();
+        print(oxygenSlider.name);
+
+        bossSlider = transform.GetChild(1).GetComponent<Slider>();
+        print(bossSlider.name);
+
         currentHeightText = GetComponentInChildren<TextMeshProUGUI>();
         oxygenTank = GameObject.FindGameObjectWithTag("Player").GetComponent<OxygenTank>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        boss = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossHealth>();
     }
 
     void Update()
@@ -31,6 +41,10 @@ public class UImanager : MonoBehaviour
         //updating oxygen
         oxygenTankValue = oxygenTank.oxygenValue;
         oxygenSlider.value = oxygenTankValue;
+
+        //updating boss health
+        bossHealth = boss.health;
+        bossSlider.value = bossHealth;
 
         //updating current height
         currentHeightNum = playerMovement.currentHeight;

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
-    private int health;
+    [HideInInspector] public int health;
     private SpriteRenderer image;
 
     private void Start()
     {
-        health = 100;
+        health = 500;
         image = GetComponent<SpriteRenderer>();
     }
     public IEnumerator TakeDamage()
