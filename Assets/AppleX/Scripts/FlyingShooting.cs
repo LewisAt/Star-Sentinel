@@ -10,6 +10,7 @@ public class FlyingShooting : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     public float time;
+    public float 
     
 
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class FlyingShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time = Time.deltaTime;
+        time += Time.deltaTime;
         if (time > 10)
         {
             Destroy(gameObject);
@@ -45,8 +46,7 @@ public class FlyingShooting : MonoBehaviour
         {
 
             player.GetComponent<OxygenTank>().oxygenValue -= 5;
-            player.GetComponent<SpriteRenderer>().color = Color.red;
-            circleColor.color = Color.red;
+           
             Destroy(gameObject);
 
             

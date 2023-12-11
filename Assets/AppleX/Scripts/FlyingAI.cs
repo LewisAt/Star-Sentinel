@@ -53,7 +53,7 @@ public class FlyingAI : MonoBehaviour
             if (!alreadyAttack)
             {*/
                
-                if (timeShooting > 3)
+                if (timeShooting > 1)
                 {
                     alreadyAttack = true;
                     timeShooting = 0;
