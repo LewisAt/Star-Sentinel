@@ -10,13 +10,17 @@ public class GameOverSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HighScoreText.text = "Your Max Height was: " + PlayerController.StaticDistance;
+        HighScoreText.text = "Your Max Height was: " + (int)(PlayerController.StaticDistance);
     }
 
     // Update is called once per frame fuck fuck fuck fuck fuck fuck fuck my leg hurts
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(1);
     }
     public void quitGame()
     {

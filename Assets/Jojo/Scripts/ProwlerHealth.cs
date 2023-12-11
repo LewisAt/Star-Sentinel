@@ -6,6 +6,7 @@ public class ProwlerHealth : MonoBehaviour
     private int health;
     private SpriteRenderer image;
     public GameObject oxygenDrop;
+    public BoxCollider2D PlayerHurtableBox;
 
     private void Start()
     {
@@ -42,7 +43,8 @@ public class ProwlerHealth : MonoBehaviour
     {
         Color alphaChange = image.color;
         Transform size = gameObject.transform;
-        
+        PlayerHurtableBox.enabled = false;
+
         for (int i = 0; i < 3;i++)
         {
             alphaChange.a = Mathf.Lerp(alphaChange.a, 0, 0.2f);

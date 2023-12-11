@@ -32,6 +32,8 @@ public class OxygenTank : MonoBehaviour
 
     void Update()
     {
+
+        oxygenValue = Mathf.Clamp(oxygenValue, 0.0f, 100.0f);
         if (oxygenValue <= 0)
         {
             timeBeforeDeath -= Time.deltaTime;
@@ -65,12 +67,11 @@ public class OxygenTank : MonoBehaviour
     }
     void fadeIntoRecovery()
     {
-        curve = Mathf.Lerp(curve, 0, 1f * Time.deltaTime);
 
-        float position = FadeCurve.Evaluate(curve);
 
         Color CurrentColor = BackGroundFade.color;
-        CurrentColor.a = Mathf.Lerp(BackGroundFade.color.a, 0, position);
+        CurrentColor.a = 0f;
+        curve = 0;
         BackGroundFade.color = CurrentColor;
 
     }
