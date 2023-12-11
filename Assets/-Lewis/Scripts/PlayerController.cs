@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask layermaskforPlayerFeet;
     private bool canJump = true;
     private bool CanDoubleJump = true;
+    public SpriteRenderer image;
 
     //public AnimationCurve ()
     // Start is called before the first frame update
@@ -81,5 +82,22 @@ public class PlayerController : MonoBehaviour
     public static void setStaticDistance(float height)
     {
         StaticDistance = height;
+    }
+    public void takeDamageFunc()
+    {
+        StartCoroutine(TakeDamage());
+    }
+    private IEnumerator TakeDamage()
+    {
+        Color neutralColor = Color.white;
+        Color damageColor = Color.red;
+
+        for (int i = 0; i < 3; i++)
+        {
+            image.color = damageColor;
+            yield return new WaitForSeconds(0.1f);
+            image.color = neutralColor;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }
