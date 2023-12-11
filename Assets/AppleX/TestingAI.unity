@@ -200,6 +200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingThing
       objectReference: {fileID: 0}
+    - target: {fileID: 4168962008700714823, guid: 541c87107199e594885040b6e6d2ba40, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8866424982297822780, guid: 541c87107199e594885040b6e6d2ba40, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -210,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8866424982297822780, guid: 541c87107199e594885040b6e6d2ba40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.15
+      value: 3.15
       objectReference: {fileID: 0}
     - target: {fileID: 8866424982297822780, guid: 541c87107199e594885040b6e6d2ba40, type: 3}
       propertyPath: m_LocalPosition.z
@@ -305,7 +309,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4956624680601056721, guid: 8ea929dfc59fc854aa248845daa1b61b, type: 3}
+      propertyPath: ourPlatformCollider
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4805747886592469751, guid: 8ea929dfc59fc854aa248845daa1b61b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -318,6 +327,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 244827937367890268, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 244827937367890268, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
       propertyPath: m_CollisionDetection
       value: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 81fa635a78643474b8089787efc68308
+guid: 1398542cee26537458c40cbc1d66e547
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: AlienShoot
+  - name: AlienShootA
     originalName: 
-    pivot: {x: 0.6862745, y: -0.625}
+    pivot: {x: 0.44827586, y: -0.90909094}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 51
-      height: 16
-    spriteID: 45f3538c17a920246bc6adf80bf7801b
+      width: 29
+      height: 11
+    spriteID: 37b56bddd4adf5940a45db90b830ca06
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1508402792
-    name: AlienShoot
+    guid: 1177769573
+    name: AlienShootA
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AlienShoot
+    - name: AlienShootA
       frameIndex: 0
       cellRect:
-        x: -19
+        x: 3
         y: 10
-        width: 51
-        height: 16
-      spriteId: 45f3538c17a920246bc6adf80bf7801b
+        width: 29
+        height: 11
+      spriteId: 37b56bddd4adf5940a45db90b830ca06
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 31}
+  canvasSize: {x: 32, y: 32}
