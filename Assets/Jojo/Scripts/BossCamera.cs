@@ -7,10 +7,12 @@ public class BossCamera : MonoBehaviour
     public GameObject player;
     private Camera mainCam;
     public CanvasGroup canvas;
+    public bool startedPlaying;
     // Start is called before the first frame update
 
     private void Awake()
     {
+        //startedPlaying = false;
         mainCam = GetComponent<Camera>();
     }
     void Start()
@@ -53,6 +55,7 @@ public class BossCamera : MonoBehaviour
         {
             canvas.alpha = Mathf.Lerp(canvas.alpha, 1f, 0.2f);
             yield return new WaitForSeconds(0.1f);
+            startedPlaying = true;
         }
     }
 }
