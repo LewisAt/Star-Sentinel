@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Jojo/FinalBoss.unity
     guid: 487e4ee190e04d44d9c1b2b4968805eb
+  - enabled: 1
+    path: Assets/-Lewis/Scenes/Credits.unity
+    guid: 16230835658f5564fa0cec515afb7ec7
   m_configObjects: {}
