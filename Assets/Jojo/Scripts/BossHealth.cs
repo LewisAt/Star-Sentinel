@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
     [HideInInspector] public int health;
     private SpriteRenderer image;
+    public GameObject gameOverScreen;
 
     private void Start()
     {
@@ -50,6 +52,8 @@ public class BossHealth : MonoBehaviour
             image.color = alphaChange;
             yield return new WaitForSeconds(0.2f);
         }
+        gameOverScreen.SetActive(true);
         Destroy(gameObject);
     }
+   
 }
