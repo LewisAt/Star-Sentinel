@@ -71,6 +71,7 @@ public class OxygenTank : MonoBehaviour
 
         Color CurrentColor = BackGroundFade.color;
         CurrentColor.a = 0f;
+        curve = 0;
         BackGroundFade.color = CurrentColor;
 
     }

@@ -16,9 +16,9 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public float heightToReach;
     [HideInInspector] public float currentHeight;
 
-
-    private bool canJump = false;
-    private bool CanDoubleJump = false;
+    public LayerMask layermaskforPlayerFeet;
+    private bool canJump = true;
+    private bool CanDoubleJump = true;
 
     //public AnimationCurve ()
     // Start is called before the first frame update
@@ -39,20 +39,30 @@ public class PlayerController : MonoBehaviour
         playerRB.velocity = direction;
         playerRB.velocity += Vector2.up * -ForceOfGravity;
         RaycastHit2D hit;
-        if(Physics2D.Raycast(Feet.transform.position,Vector2.down,5,~7))
+        if(Physics2D.Raycast(Feet.transform.position,Vector2.down,0.5f, layermaskforPlayerFeet))
         {
+            Debug.DrawRay(Feet.transform.position, Vector3.down * 5, Color.red);
+
+            canJump = true;
+            CanDoubleJump = true;
             //reset jump and double jump
+            Debug.Log("IsOnGround");
         }
         else
         {
+            canJump = false;
+        }
+        {
            // if double jump is not false and player jumps set doulbe jumpt to false
         }
-        CanDoubleJump = true;
 
- 
 
-        if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f && canJump || CanDoubleJump)
+        if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f && canJump || Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f && CanDoubleJump)
         {
+            if (CanDoubleJump && !canJump)
+            {
+                CanDoubleJump = false;
+            }
             playerRB.velocity += new Vector2(0, 65 * heldDownTime);
             heldDownTime -= Time.deltaTime;
         }

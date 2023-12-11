@@ -17,6 +17,8 @@ public class Shoot : MonoBehaviour
     private float timer;
     public float timeBetweenFiring;
 
+    public GameObject Ourself;
+
     private void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -26,6 +28,16 @@ public class Shoot : MonoBehaviour
     private void Update()
     {
         mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 postionToPlayer = mousePos - Ourself.transform.position;
+        if(postionToPlayer.x < 0)
+        {
+            Ourself.transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            Ourself.transform.eulerAngles = new Vector3(0, 0, 0);
+
+        }
         Vector3 rotation = mousePos - transform.position;
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
