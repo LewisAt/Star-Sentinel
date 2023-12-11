@@ -6996,26 +6996,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2519906653593479300, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: Ourself
-      value: 
-      objectReference: {fileID: 282912249}
     - target: {fileID: 4949338436484875179, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
       propertyPath: spawn
       value: 
       objectReference: {fileID: 1038951697}
-    - target: {fileID: 4949338436484875179, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: layermaskforPlayerFeet.m_Bits
-      value: 1271
-      objectReference: {fileID: 0}
-    - target: {fileID: 7760206698575173152, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7760206698575173152, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 8192788026864652577, guid: 555953bb564b0f84db2c388064b411bb, type: 3}
       propertyPath: m_Name
       value: fake player
