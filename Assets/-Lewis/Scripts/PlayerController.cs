@@ -56,7 +56,10 @@ public class PlayerController : MonoBehaviour
         {
            // if double jump is not false and player jumps set doulbe jumpt to false
         }
-
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            StartCoroutine(TakeDamage());
+        }
 
         if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f && canJump || Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f && CanDoubleJump)
         {

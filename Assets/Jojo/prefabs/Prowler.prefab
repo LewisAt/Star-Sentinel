@@ -68,7 +68,7 @@ Transform:
   - {fileID: 5245619305997770243}
   - {fileID: 4311932971805740238}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4002540935976367324
 SpriteRenderer:
@@ -216,7 +216,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 200
   downDistance: 1.5
-  frontDistance: 2.25
+  frontDistance: 3.64
   downController: {fileID: 5245619305997770243}
   frontController: {fileID: 4311932971805740238}
   downInfo: 0
