@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -15,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector] public float heightToReach;
     [HideInInspector] public float currentHeight;
-
+    public TMP_Text TempTextDeleteifNotNeed;
     public LayerMask layermaskforPlayerFeet;
     private bool canJump = true;
     private bool CanDoubleJump = true;
@@ -40,36 +41,37 @@ public class PlayerController : MonoBehaviour
         playerRB.velocity = direction;
         playerRB.velocity += Vector2.up * -ForceOfGravity;
         RaycastHit2D hit;
-        if(Physics2D.Raycast(Feet.transform.position,Vector2.down,0.5f, layermaskforPlayerFeet))
+        if(Physics2D.Raycast(Feet.transform.position,Vector2.down,0.2f, layermaskforPlayerFeet))
         {
             Debug.DrawRay(Feet.transform.position, Vector3.down * 5, Color.red);
 
             canJump = true;
             CanDoubleJump = true;
             //reset jump and double jump
-            Debug.Log("IsOnGround");
         }
-        else
+        if (CanDoubleJump && !canJump && Input.GetKeyUp(KeyCode.Space))
+        {
+            CanDoubleJump = false;
+        }
+        else if (!Input.GetKey(KeyCode.Space))
         {
             canJump = false;
-        }
-        {
-           // if double jump is not false and player jumps set doulbe jumpt to false
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
             StartCoroutine(TakeDamage());
         }
-
+        if(TempTextDeleteifNotNeed != null)
+        {
+            TempTextDeleteifNotNeed.text = "Player Jump : " + canJump + "\nPlayer DoubleJump: " + CanDoubleJump;
+        }
         if (Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f && canJump || Input.GetKey(KeyCode.Space) && heldDownTime > 0.0f && CanDoubleJump)
         {
-            if (CanDoubleJump && !canJump)
-            {
-                CanDoubleJump = false;
-            }
+            
             playerRB.velocity += new Vector2(0, 65 * heldDownTime);
             heldDownTime -= Time.deltaTime;
         }
+
         if (Input.GetKeyUp(KeyCode.Space))
         {
             heldDownTime = 0.5f;

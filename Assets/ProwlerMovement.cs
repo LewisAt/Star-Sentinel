@@ -66,5 +66,6 @@ public class ProwlerMovement : MonoBehaviour
     {
         rb2D.velocity = new Vector2(speed * 2, rb2D.velocity.y);
     }
+
  
 }
